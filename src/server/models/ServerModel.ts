@@ -558,6 +558,7 @@ export class Server {
       promoCardsOption: options.promoCardsOption,
       politicalAgendasExtension: options.politicalAgendasExtension,
       removeNegativeGlobalEvents: options.removeNegativeGlobalEventsOption,
+      mergerOnlyOption: options.mergerOnlyOption,
       showOtherPlayersVP: options.showOtherPlayersVP,
       showTimers: options.showTimers,
       shuffleMapOption: options.shuffleMapOption,

@@ -26,6 +26,7 @@ export type GameOptionsModel = {
   promoCardsOption: boolean,
   politicalAgendasExtension: AgendaStyle,
   removeNegativeGlobalEvents: boolean,
+  mergerOnlyOption: boolean,
   showOtherPlayersVP: boolean,
   showTimers: boolean,
   shuffleMapOption: boolean,

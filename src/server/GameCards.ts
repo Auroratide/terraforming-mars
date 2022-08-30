@@ -106,6 +106,14 @@ export class GameCards {
     if (preludes.length === 0) {
       preludes = this.instantiate(PRELUDE_CARD_MANIFEST.preludeCards);
     }
+
+    if (this.gameOptions.mergerOnlyOption) {
+      const mergerCard = preludes.find((it) => it.name === CardName.MERGER);
+      if (mergerCard !== undefined) {
+        return preludes.fill(mergerCard);
+      }
+    }
+
     return this.addCustomCards(preludes, this.gameOptions.customPreludes);
   }
 

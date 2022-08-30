@@ -241,6 +241,11 @@
                                 <span v-i18n>Exclude some cards</span>
                             </label>
 
+                            <input type="checkbox" v-model="mergerOnlyOption" id="mergerOnly-checkbox">
+                            <label for="mergerOnly-checkbox">
+                                <span v-i18n>Merger Only</span>
+                            </label>
+
                             <template v-if="colonies">
                                 <input type="checkbox" v-model="showColoniesList" id="customColonies-checkbox">
                                 <label for="customColonies-checkbox">
@@ -501,6 +506,7 @@ export interface CreateGameModel {
     showTimers: boolean;
     fastModeOption: boolean;
     removeNegativeGlobalEventsOption: boolean;
+    mergerOnlyOption: boolean;
     includeVenusMA: boolean;
     startingCorporations: number;
     soloTR: boolean;
@@ -600,6 +606,7 @@ export default (Vue as WithRefs<Refs>).extend({
       escapeVelocityThreshold: constants.DEFAULT_ESCAPE_VELOCITY_THRESHOLD,
       escapeVelocityPeriod: constants.DEFAULT_ESCAPE_VELOCITY_PERIOD,
       escapeVelocityPenalty: constants.DEFAULT_ESCAPE_VELOCITY_PENALTY,
+      mergerOnlyOption: false,
     };
   },
   components: {
@@ -1094,6 +1101,7 @@ export default (Vue as WithRefs<Refs>).extend({
         escapeVelocityThreshold,
         escapeVelocityPeriod,
         escapeVelocityPenalty,
+        mergerOnlyOption: component.mergerOnlyOption,
       };
       return JSON.stringify(dataToSend, undefined, 4);
     },

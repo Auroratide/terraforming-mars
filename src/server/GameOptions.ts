@@ -29,6 +29,7 @@ export type GameOptions = {
   politicalAgendasExtension: AgendaStyle;
   solarPhaseOption: boolean;
   removeNegativeGlobalEventsOption: boolean;
+  mergerOnlyOption: boolean;
   includeVenusMA: boolean;
   moonExpansion: boolean;
   pathfindersExpansion: boolean;
@@ -86,6 +87,7 @@ export const DEFAULT_GAME_OPTIONS: GameOptions = {
   randomMA: RandomMAOptionType.NONE,
   requiresMoonTrackCompletion: false,
   removeNegativeGlobalEventsOption: false,
+  mergerOnlyOption: false,
   requiresVenusTrackCompletion: false,
   showOtherPlayersVP: false,
   showTimers: true,

@@ -104,6 +104,7 @@ export class GameHandler extends Handler {
             communityCardsOption: gameReq.communityCardsOption,
             solarPhaseOption: gameReq.solarPhaseOption,
             removeNegativeGlobalEventsOption: gameReq.removeNegativeGlobalEventsOption,
+            mergerOnlyOption: gameReq.mergerOnlyOption,
             includeVenusMA: gameReq.includeVenusMA,
 
             draftVariant: gameReq.draftVariant,

@@ -106,6 +106,7 @@ function simpleGameOptions(): GameOptions {
     politicalAgendasExtension: AgendaStyle.STANDARD,
     solarPhaseOption: false,
     removeNegativeGlobalEventsOption: false,
+    mergerOnlyOption: false,
     draftVariant: false,
     corporationsDraft: false,
     initialDraftVariant: false,
