@@ -34,8 +34,25 @@ export function byModule(module: GameModule): (card: ClientCard) => boolean {
 
 export const toName = (card: ClientCard) => card.name;
 
+function addMoreMergerCards(n: number): Array<ClientCard> {
+  const allCards = cardJson as any as Array<ClientCard>;
+  const mergerTemplate = allCards.find((it) => it.name === 'Merger');
+  for (let i = 2; i <= n; ++i) {
+    const mergerClone = structuredClone(mergerTemplate);
+    const newName = `Merger ${i}`;
+    allCards.push({
+      ...mergerClone,
+      name: newName,
+    });
+  }
+
+  return allCards;
+}
+
 function initialize() {
-  (cardJson as any as Array<ClientCard>).forEach((card) => {
+  const allCards = addMoreMergerCards(30);
+
+  allCards.forEach((card) => {
     cards.set(card.name, card);
     cardArray.push(card);
   });

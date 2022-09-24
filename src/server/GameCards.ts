@@ -19,6 +19,7 @@ import {IProjectCard} from './cards/IProjectCard';
 import {StandardProjectCard} from './cards/StandardProjectCard';
 import {PreludeCard} from './cards/prelude/PreludeCard';
 import {CardFinder} from './CardFinder';
+import {Merger} from './cards/promo/Merger';
 
 /**
  * Returns the cards available to a game based on its `GameOptions`.
@@ -108,10 +109,40 @@ export class GameCards {
     }
 
     if (this.gameOptions.mergerOnlyOption) {
-      const mergerCard = preludes.find((it) => it.name === CardName.MERGER);
-      if (mergerCard !== undefined) {
-        return preludes.fill(mergerCard);
-      }
+      preludes = [
+        new Merger(CardName.MERGER),
+        new Merger(CardName.MERGER_02),
+        new Merger(CardName.MERGER_03),
+        new Merger(CardName.MERGER_04),
+        new Merger(CardName.MERGER_05),
+        new Merger(CardName.MERGER_06),
+        new Merger(CardName.MERGER_07),
+        new Merger(CardName.MERGER_08),
+        new Merger(CardName.MERGER_09),
+        new Merger(CardName.MERGER_10),
+        new Merger(CardName.MERGER_11),
+        new Merger(CardName.MERGER_12),
+        new Merger(CardName.MERGER_13),
+        new Merger(CardName.MERGER_14),
+        new Merger(CardName.MERGER_15),
+        new Merger(CardName.MERGER_16),
+        new Merger(CardName.MERGER_17),
+        new Merger(CardName.MERGER_18),
+        new Merger(CardName.MERGER_19),
+        new Merger(CardName.MERGER_20),
+        new Merger(CardName.MERGER_21),
+        new Merger(CardName.MERGER_22),
+        new Merger(CardName.MERGER_23),
+        new Merger(CardName.MERGER_24),
+        new Merger(CardName.MERGER_25),
+        new Merger(CardName.MERGER_26),
+        new Merger(CardName.MERGER_27),
+        new Merger(CardName.MERGER_28),
+        new Merger(CardName.MERGER_29),
+        new Merger(CardName.MERGER_30),
+      ];
+
+      return preludes;
     }
 
     return this.addCustomCards(preludes, this.gameOptions.customPreludes);

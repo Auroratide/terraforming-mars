@@ -12,9 +12,9 @@ import {CARD_COST} from '../../../common/constants';
 import {CorporationDeck} from '../Deck';
 
 export class Merger extends PreludeCard {
-  constructor() {
+  constructor(name: CardName = CardName.MERGER) {
     super({
-      name: CardName.MERGER,
+      name: name,
 
       metadata: {
         cardNumber: 'X41',
